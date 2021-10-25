@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Deep Learning | L</title>
+    <link>/tags/deep-learning/</link>
+      <atom:link href="/tags/deep-learning/index.xml" rel="self" type="application/rss+xml" />
+    <description>Deep Learning</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>Deep Learning</title>
+      <link>/tags/deep-learning/</link>
+    </image>
+    
+    <item>
+      <title>Oracle Bone Character Recognition</title>
+      <link>/project/oracle-bone/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>/project/oracle-bone/</guid>
+      <description>&lt;h1 id=&#34;introduction&#34;&gt;Introduction&lt;/h1&gt;
+&lt;p&gt;Oracle bone inscriptions (OBIs) are some of the oldest characters of Chinese words, which were hieroglyphic signs inscribed onto cattle bones or turtle shells with sharp objects about 3000 years ago. OBIs are very important to exploit the political systems, economic status and social lives of Shang Dynasty (about 1600 B.C. -1046 B.C.), the ﬁrst dynasty recorded by Chinese words found so far. However, few people have the literacy of OBIs. The recognition of OBIs, which interdisciplinarily combines archaeology, history, philology and literature, requires people to have plenty of knowledge and years of experiences.&lt;/p&gt;
+&lt;h1 id=&#34;data-set&#34;&gt;Data set&lt;/h1&gt;
+&lt;p&gt;&lt;img src=&#34;4.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h1 id=&#34;models&#34;&gt;Models&lt;/h1&gt;
+&lt;ul&gt;
+&lt;li&gt;CNN: We adapt AlexNet, altering its kernel sizes, paddings, numbers of channels, and strides, for this task.&lt;/li&gt;
+&lt;li&gt;SIFT/SURF: We adopt two methods for scale and rotation invariant interest point/feature detector and descriptor: Scale Invariant Feature Transform (SIFT) and Speed Up Robust Features (SURF). After extracting features, we perform a quick and efﬁcient matching by using the FLANN (Fast Approximate Nearest Neighbor Search Library).&lt;/li&gt;
+&lt;li&gt;Template matching is a technique for ﬁnding areas of an image that match (are similar) to a template image (patch). Template matching works by &amp;ldquo;sliding&amp;rdquo; the template across the original image. As it slides, it compares or matches the template to the portion of the image directly under it.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;experiment-results&#34;&gt;Experiment Results:&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;3.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;real-scence-tests&#34;&gt;Real Scence Tests:&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&#34;2.jpg&#34; alt=&#34;&#34;&gt;
+&lt;img src=&#34;1.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

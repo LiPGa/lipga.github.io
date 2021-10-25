@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 4.7.0">
+
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  <meta name="author" content="Lingjia Li">
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Efficient determination of user relation in social networks">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/post/friends/">
+
+  
+
+
+  
+  
+  
+  <meta name="theme-color" content="#2962ff">
+  
+
+  
+  
+  
+  <script src="/js/mathjax-config.js"></script>
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha256-+N4/V/SbAFiW1MPBCXnfnP9QSN3+Keu+NlB+0ev/YKQ=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/github.min.css" crossorigin="anonymous" title="hl-light">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/dracula.min.css" crossorigin="anonymous" title="hl-dark" disabled>
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.css" integrity="sha256-SHMGCYmST46SoyGgo4YR/9AlK1vf3ff84Aq9yK4hdqM=" crossorigin="anonymous">
+    
+
+    
+
+    
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.1.2/lazysizes.min.js" integrity="sha256-Md1qLToewPeKjfAHU1zyPwOutccPAm5tahnaw7Osw0A=" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+    
+      
+
+      
+      
+
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" integrity="" crossorigin="anonymous" async></script>
+      
+    
+      
+
+      
+      
+
+      
+    
+
+  
+
+  
+  
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+  
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/css/academic.css">
+
+  
+
+
+
+
+  
+
+
+  
+
+  <link rel="manifest" href="/index.webmanifest">
+  <link rel="icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_2.png">
+  <link rel="apple-touch-icon" type="image/png" href="/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_2.png">
+
+  <link rel="canonical" href="/post/friends/">
+
+  
+  
+  
+  
+  
+    
+  
+  
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="og:site_name" content="L">
+  <meta property="og:url" content="/post/friends/">
+  <meta property="og:title" content="Are we friends?  | L">
+  <meta property="og:description" content="Efficient determination of user relation in social networks"><meta property="og:image" content="/post/friends/featured.jpg">
+  <meta property="twitter:image" content="/post/friends/featured.jpg"><meta property="og:locale" content="en-us">
+  
+    
+      <meta property="article:published_time" content="2019-12-12T00:00:00&#43;00:00">
+    
+    <meta property="article:modified_time" content="2019-12-12T00:00:00&#43;00:00">
+  
+
+  
+
+
+    
+
+
+
+
+
+
+  
+
+
+
+
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "/post/friends/"
+  },
+  "headline": "Are we friends? ",
+  
+  "image": [
+    "/post/friends/featured.jpg"
+  ],
+  
+  "datePublished": "2019-12-12T00:00:00Z",
+  "dateModified": "2019-12-12T00:00:00Z",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Lingjia Li"
+  },
+  
+  "publisher": {
+    "@type": "Organization",
+    "name": "L",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "img//"
+    }
+  },
+  "description": "Efficient determination of user relation in social networks"
+}
+</script>
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+
+  <title>Are we friends?  | L</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-offset="70" data-target="#TableOfContents" >
+
+  <aside class="search-results" id="search">
+  <div class="container">
+    <section class="search-header">
+
+      <div class="row no-gutters justify-content-between mb-3">
+        <div class="col-6">
+          <h1>Search</h1>
+        </div>
+        <div class="col-6 col-search-close">
+          <a class="js-search" href="#"><i class="fas fa-times-circle text-muted" aria-hidden="true"></i></a>
+        </div>
+      </div>
+
+      <div id="search-box">
+        
+        <input name="q" id="search-query" placeholder="Search..." autocapitalize="off"
+        autocomplete="off" autocorrect="off" spellcheck="false" type="search">
+        
+      </div>
+
+    </section>
+    <section class="section-search-results">
+
+      <div id="search-hits">
+        
+      </div>
+
+    </section>
+  </div>
+</aside>
+
+
+  
+
+
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="d-none d-lg-inline-flex">
+      <a class="navbar-brand" href="/">L</a>
+    </div>
+    
+
+    
+    <button type="button" class="navbar-toggler" data-toggle="collapse"
+            data-target="#navbar-content" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+    <span><i class="fas fa-bars"></i></span>
+    </button>
+    
+
+    
+    <div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+      <a class="navbar-brand" href="/">L</a>
+    </div>
+    
+
+    
+    
+    <div class="navbar-collapse main-menu-item collapse justify-content-start" id="navbar-content">
+
+      
+      <ul class="navbar-nav d-md-inline-flex">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#about"><span>Home</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#posts"><span>Work Samples</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+          
+          
+          
+            
+          
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/#projects"><span>Projects</span></a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        
+        
+        
+        
+        
+        
+
+        <li class="nav-item">
+          <a class="nav-link " href="/files/cv.pdf"><span>CV</span></a>
+        </li>
+
+        
+        
+
+      
+
+        
+      </ul>
+    </div>
+
+    <ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+      
+      <li class="nav-item">
+        <a class="nav-link js-search" href="#"><i class="fas fa-search" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+      <li class="nav-item">
+        <a class="nav-link js-dark-toggle" href="#"><i class="fas fa-moon" aria-hidden="true"></i></a>
+      </li>
+      
+
+      
+
+    </ul>
+
+  </div>
+</nav>
+
+
+  <article class="article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+
+<div class="article-container pt-3">
+  <h1>Are we friends? </h1>
+
+  
+  <p class="page-subtitle">Efficient determination of user relation in social networks 🍻</p>
+  
+
+  
+
+
+<div class="article-metadata">
+
+  
+  
+
+  
+  <span class="article-date">
+    
+    
+      
+    
+    Dec 12, 2019
+  </span>
+  
+
+  
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    13 min read
+  </span>
+  
+
+  
+  
+  
+
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder mr-1"></i><a href="/categories/work-sample/">Work Sample</a></span>
+  
+
+</div>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 720px; max-height: 469px;">
+  <div style="position: relative">
+    <img src="/post/friends/featured_hu60edc3359cb8b56a3f17ec3a4c311955_54972_720x0_resize_q100_lanczos.jpg" alt="" class="featured-image">
+    
+  </div>
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style">
+      <h1 id="introduction">Introduction</h1>
+<p>Social media has revolutionized how humans create knowledge artifacts. It has increased individual engagement, broadened community participation and led to the formation of new <strong>social networks</strong>.
+A wide variety of Web services feature publicly articulated social networks. Often, the value users derive from these services depends on the quality and diversity of users&rsquo; networks.</p>
+<p>Friendship is a socially loaded concept often used to establish a sense of community on personal social network sites, and it has been suggested that users can beneﬁt from connecting to new people and expanding their networks.</p>
+<p>With the emergence of <strong>socially-enabled</strong> software repositories and collaborative development environments, it becomes increasingly meaningful to apply social network analysis techniques to this kind of rising field. In this project, we propose methods for :who to befriend&rdquo; recommendations on <code>GitHub</code> and introduce the system we implement based on these methods.</p>
+<h1 id="background">Background</h1>
+<p>In this section we give a brief introduction to the subject in our work, the <code>GitHub</code> site. It is a popular code repository site for a lot of well-known and active projects.</p>
+<h2 id="people">People</h2>
+<p>On the GitHub site, developers create proﬁles that can be optionally populated with identifying information including a gravatar (an image representing them throughout the site), their name, email address, organization, location, and webpage. A developer’s proﬁle is visible to other users and displays all the repositories that person is working on and a list of their latest activities on the site.</p>
+<h2 id="code-artifacts">Code artifacts</h2>
+<p>GitHub currently hosts over one million code repositories, and has 340,000 registered contributors. While a majority of the projects on GitHub are single-developer code dumps, many are active multi-developer projects of signiﬁcant scale that have been running for some time. Each repository on GitHub has a dedicated project page that hosts the source code ﬁles, commit history, open issues, and other data associated with the project. Developers can create permanent URLs to link to speciﬁc lines within a code ﬁle. This functionality allows information about artifacts within the site to ﬂow outside of the GitHub community to the web at large.</p>
+<h2 id="actions">Actions</h2>
+<p>Actions in GitHub occur when a person changes an artifact or interacts with another person through the site. These actions can be code-related, communication, or subscription. Actions on code or associated with code include committing, forking and submitting a pull request. Project owners can make commits, i.e. changes to the code, by directly modifying the contents of code ﬁles. Developers without commit-rights to a project must fork a project, creating a personal copy of the code that they can change freely. They can then submit some or all of the changes to the original project by issuing a pull request. The project owner or another member with commit rights can then merge in their changes. Developers can also communicate around code-related actions by submitting a comment on a commit, an issue, or a pull request.</p>
+<h1 id="motivation">Motivation</h1>
+<p>It is of great importance to practice friends identiﬁcation or determination on GitHub for both technical and social reasons.</p>
+<h6 id="technical">Technical</h6>
+<p>Discovering friend relations in GitHub can help improve collaboration efficiency. It is useful to identify the friendships which have already exist in realistic so that project managers in practice can reassign developers by taking friend relation into consideration.</p>
+<h6 id="social">Social</h6>
+<p>The friend determination functionality can serve as the extension of the social functionality of GitHub. On one side, it can help developers maintain and enhance relationships which have already been established. On the other hand, the functionality can help to recommend friends, construct friendships based on the extracted data on GitHub, so that developers can build brand new friendships based on the platform, which can undoubtedly improve their enjoyment not only at work but also from the user-experience point of view.</p>
+<p>Social network services are acutely aware that users need friends to enjoy a social network, and so services like Facebook often recommend users to people.</p>
+<p>GitHub, as an open source software (OSS) development community, is specially featured as a volunteer-driven task community, where developers’ enjoyment play a dominant role in developers’ participants.</p>
+<p><strong>However, to our knowledge, there is no friend determination or friend recommendation system specially designed for GitHub, or other online software development communities</strong>. Therefore, we propose our idea, and construct the friend recommendation system, named GitPal 3 , using the principles in follower recommendations as well as friend determination on other social platforms. We hope to put our system into realistic use, thus improving both the developing efficiency and user experience on GitHub.</p>
+<h1 id="referenced-methods">Referenced Methods</h1>
+<h2 id="follower-recommendation-in-github">Follower recommendation in GitHub</h2>
+<p>Following/follower recommendations can be performed according to different strategies. It is common to divide them into three categories: <em>behavioral</em>, <em>similarity</em>, and <em>network</em>.</p>
+<h2 id="similarity">Similarity</h2>
+<p>In real life, people tend to befriend those with similar sociodemographic characteristics and interests, a phenomenon called homophily. It stands to reason, then, that users might be interested in attending to people with similar interests. As a proxy for this, we use user-deﬁned “person tags”, which list users’ interests, hobbies, and skills.</p>
+<h2 id="behavioral">Behavioral</h2>
+<p>This recommendation type is based on already observed interaction between two people. For example, a person may have commented on code checked in by some other person or a person may have replied to a question (e.g., usage of library, report of bug, etc.) posted by someone in a discussion forum. Thus, based on the interaction between two people a follow recommendation can be made.</p>
+<h2 id="network">Network</h2>
+<p>The network based recommendation type can be based on various techniques. Collaborative ﬁltering is a technique for recommending content to users based on other users with similar interest. Collaborative ﬁltering techniques are commonly seen on e-commerce sites. Applied to our problem domain, if A watches the same software repositories as B, than A might be interested in following B because both share similar interests. Triadic closure is another concept for network based recommendation. Suppose three community members A, B, and C and social ties between A–C and B–C. As suggested by Granovetter, in most of these social structures, a triadic closure occurs such that A and B are likely to become friends (or connected to each other) the more they associate with C. Network centrality of various types of vertices in a graph can be computed to determine the relative importance of vertices (e.g., methods such as <code>PageRank</code> and <code>HITS</code>). In social networks, network centrality techniques can be used to estimate the importance of users. The application is, for example, expert recommendation.</p>
+<h2 id="friend-recommendation-in-other-social-platforms">Friend recommendation in other social platforms</h2>
+<p><strong>Reciprocity</strong> is the concept in directed social networks that two actors are mutually connected to each other [7].</p>
+<p>Typically the friend recommendation in social network services like Facebook is done by looking for people who are connected to many of a user’s friends, reasoning that the user is likely to already know them. This intuition works well in an undirected social network. However, in a directed social network setting where both social and information relationships are found, the question of who to recommend a user to follow becomes more complicated.</p>
+<p>Furthermore, many social network services have access to much more information than the network structure: users supply details about their interests and background, and they provide clues about who interests them by choosing whose posts to read and respond to. This led us to ask what cues in a user’s proﬁle, behavior, and network might be most eﬀective in recommending people.</p>
+<p>Considering all these diﬃculties, we include 4 more general heuristics to make our recommendations more applicable to GitHub.</p>
+<h1 id="heuristics">Heuristics</h1>
+<h2 id="heuristic-1-people-with-similar-interest-domains-are-likely-to-be-friends">Heuristic 1: People with similar interest domains are likely to be friends.</h2>
+<p>In real life, people tend to befriend others with similar characteristics and interests, a phenomenon called homophily. This give us heuristics to build a personal tag for each user based on their activities in diﬀerent repositories and calculate their relevance for the subsequent friend recommendations.</p>
+<h3 id="data-extraction">Data extraction</h3>
+<p>In our project, interest is defined as the number of user activities in repositories of this domain. The types of activities in our data sets are shown in Figure 8 (watch, mentioned, subscribed, referenced, closed, etc.).</p>
+<p><img src="event.png" alt=""></p>
+<h3 id="network-models">Network models</h3>
+<p>Based on the extracted data, we construct the <code>User-Repo Network</code> where edges are the user's activities in the repository. It is an ordered pair $N = (V, E)$ where:</p>
+<p>$$ E := \begin{cases}(p, q) \in P_2 (V)~|~p~has~code~activities~in~q~\end{cases}$$</p>
+<p>We associate a weight to each edge of the network, which corresponds to the times of activities in the repository. The user-repo network is actually an information network rather than a social network since it reveals the global information of the interaction between users and repositories.</p>
+<p><img src="user-repo.jpg" alt="The process of mapping user-repo network to user-domain network"></p>
+<p>Then we construct the <code>User-Domain network</code>, which is a network in which each node is a developer or a specific domain, and two nodes are connected if the the developer has activities in the domain. We associate a weight to each edge of the network, which corresponds to the times of activities in the domain. This is realized by relating each repository to several separate Domains based on the main programming language information of the repositories. We map the User-Repo Network to User-Domain Network based on the relations.</p>
+<h3 id="data-processing">Data Processing</h3>
+<p>For the query user, we find out his/her top 10 interest domains. For each candidate user in the list, we calculate their interest similarity by adding all the weights in each domain together and assign a diﬀerent weight to each domain based on its ranking in the query user’s interest list. We calculate the average value, which is then normalized through Min-Max approach to the range of $[0, 1]$.</p>
+<h2 id="heuristic-2-people-with-similar-status-levels-are-likely-to-be-friends">Heuristic 2: People with similar status levels are likely to be friends.</h2>
+<p>As similarity, which depicts a user’s social characteristic, is found to be one of the most important categories in establishing friendship, we argue that similarity in social status can improve the possibilities for two users to be friends.</p>
+<p>Here we follow a social network analysis approach that is based on well established techniques including <code>HITS</code> and <code>PageRank</code>.</p>
+<p>Introduced by Page and Brin, the PageRank algorithm for weighting web pages importance based on their links has gained popularity driven by its use in the Google search engine. The PageRank score of a web page p at iteration i can be computed by the following equation:</p>
+<p>$$PR(p,i) = \frac{1-r}{T}+r\sum_{q\in K_p}\frac{PR(q,i-1)}{|L_q|}$$</p>
+<p>In this equation, r represents the probability that a web surfer would continue to surf (a.k.a. the damping factor), $T$ is the number of web pages in the database of the search engine, $K_p$ is the set of web pages that link to $p$, and $L_q$ is the set of web pages that $q$ links to.</p>
+<p>Many researches in social networks also adopt Pagerank to represent the centrality of actors in the global view of the network. Here the PageRank of each user in the follower network is calculated to characterize the authority, or status level of the user.</p>
+<h3 id="network-models-1">Network models</h3>
+<p>We construct the <code>Follower Network</code> in this part. The follower network is deﬁned as follows: Let V be the set of all developers in the data set, then the follower network N is an ordered pair $N = (V, E)$ where</p>
+<p>$$ E := \begin{cases}(p, q) \in P_2 (V)\ | \ p\ follows\ q\end{cases}$$</p>
+<p>To obtain relative similarity S(v; q) can be normalized to [0, 1] by dividing L(v)L(q) by the bigger pagerank value of node pair i.e,</p>
+<p>$$ StatusSimilarity(v;q) = \frac{|L_v-L_q|}{max(L_v , L_q)} $$</p>
+<!-- Here is the follower network we construct from our data (visualized via Gephi): -->
+<h3 id="heuristic-3-people-of-common-organizations-are-likely-to-be-friends">Heuristic 3: People of common organizations are likely to be friends.</h3>
+<p>Actually, people who are friends offline often may not follow each other on Github. For example, they are best friends oﬄine but they follow each other. However, there does exist some clue showing they may be friends. They both belong to the ’ADAPT’ lab when they are in SJTU.</p>
+<p>It is often the case that people who belong to the same organization is more likely to follow each other.</p>
+<p>Therefore, we can extract the organization data from users&rsquo; proﬁle, as the red boxes 4 shows.Then we treat the data as a list and calculate the Jaccard similarity of two users.</p>
+<p>$$J(A,B)=\frac{|A\cap B|}{|A \cup B|}$$</p>
+<p>As in 4 shows, the organization of Frank is [Adapt], while Bill belongs to [Adapt,INK]. So the Jaccard can be easily calculated as the formula above and get the organization score as 0.5.</p>
+<h3 id="heuristic-4-people-with-common-friends-are-likely-to-be-friends">Heuristic 4: People with common friends are likely to be friends.</h3>
+<p>This heuristic is based on the weak tie hypothesis: if A is linked to both B and C, then there is a greater-than-chance probability that B and C are linked to each other.</p>
+<p>if we consider any two randomly selected individuals, such as A and B, from the set S = A, B, C, D, E, &hellip;, of all persons with ties to either or both of them, then, for example, if A is strongly tied to both B and C, then according to probability arguments, the B-C tie is always present. The absence of the B-C tie, in this situation, would create, according to Granovetter, what is called the forbidden triad. In other words, the B-C tie, according to this logic, is always present, whether weak or strong, given the other two strong ties. In this direction, the &ldquo;weak tie hypothesis&rdquo; postulates that clumps or cliques of social structure will form, being bound predominately by ”strong ties”, and that &ldquo;weak ties&rdquo; will function as the crucial bridge between any two densely knit clumps of close friends.</p>
+<p><img src="link.png" alt=""></p>
+<p>In our experiments, we only take into consideration of one hop relation and bidirectional strong ties. In other words, we only treat the relation of following each other as strong ties. Also, we don't further explore the nodes that have connections with B and C.</p>
+<h1 id="gitpal-system">GitPal system</h1>
+<h2 id="data-sets">Data sets</h2>
+<p>We obtain all the data from <a href="http://ghtorrent.org/relational.html">GHTorrent</a>, which is a scalable, queryable, oﬄine mirror of data oﬀered through the Github REST API. The schema of the data sets is shown in Figure 6. For the similicity, we only use the data in the time period of year 2010 to year 2013. The table is queried using Mysql and we extract the information from the query result to construct the social networks, then we perform our subsequent friendship determination as well as recommendations based on the networks.</p>
+<p><img src="data.png" alt=""></p>
+<h2 id="architecture">Architecture</h2>
+<p>We perform our approaches by using social network (follower network, user-repo network, etc.) and activity data from GitHub. The architecture of our system is shown in Figure 7. As can be seen from the diagram in Figure 7, the four evaluating metrics are extracted from the data set and normalized and composed to get the evaluation results. For the similipicity, we only use multiplication to combine the scores. In the future, we plan to add more evaluating cases to design a better composing methods of the 4 metrics.</p>
+<p><img src="gitpal.jpg" alt=""></p>
+<p>Screenshot of GitPal system is shown as follows (the social network is visualized via Gephi):
+<img src="res.png" alt=""></p>
+<h1 id="summary-and-future-perspectives">Summary and Future perspectives</h1>
+<p>In this project, we propose methods for &ldquo;who to befriend&rdquo; recommendations on GitHub and introduce the system we implement based on these methods. Our approach is based on social network analysis techniques and four heuristics are included to make the result more targeted at the online software development communities. Although it is specially designed for GitHub, the methods may be applied to other software communities and other types of social networks as well.</p>
+<p>From this course project, we learned and accomplished the procedure to build a complete and practical system. We obtained the insight that big data in social information is important not only in analysis but also in real-world applications.</p>
+<p>This is a preliminary work and we still have a lot to improve in the future. In our future work, we plan to enhance our system from the following aspects:</p>
+<ul>
+<li>
+<p>Include larger data-sets to make our system more general;</p>
+</li>
+<li>
+<p>Consider forbidden triad in evaluating common friends;</p>
+</li>
+<li>
+<p>Optimize the performance of detection algorithm to meet online real-time demands;</p>
+</li>
+<li>
+<p>Improve the composer of our system to make the results more sensible;</p>
+</li>
+<li>
+<p>Find some ground-truth cases of friendships in GitHub to evaluate the accuracy of our results.</p>
+</li>
+</ul>
+<p>In the future, it is expected to see that our implementation will be integrated into GitHub, to improve recommendations of potential collaborators.</p>
+
+    </div>
+
+    
+
+
+
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/website/">website</a>
+  
+  <a class="badge badge-light" href="/tags/github/">GitHub</a>
+  
+</div>
+
+
+
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://twitter.com/intent/tweet?url=/post/friends/&amp;text=Are%20we%20friends?%20" target="_blank" rel="noopener" class="share-btn-twitter">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.facebook.com/sharer.php?u=/post/friends/&amp;t=Are%20we%20friends?%20" target="_blank" rel="noopener" class="share-btn-facebook">
+          <i class="fab fa-facebook"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="mailto:?subject=Are%20we%20friends?%20&amp;body=/post/friends/" target="_blank" rel="noopener" class="share-btn-email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://www.linkedin.com/shareArticle?url=/post/friends/&amp;title=Are%20we%20friends?%20" target="_blank" rel="noopener" class="share-btn-linkedin">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://web.whatsapp.com/send?text=Are%20we%20friends?%20%20/post/friends/" target="_blank" rel="noopener" class="share-btn-whatsapp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </li>
+    
+      
+      
+      
+        
+      
+      
+      
+      <li>
+        <a href="https://service.weibo.com/share/share.php?url=/post/friends/&amp;title=Are%20we%20friends?%20" target="_blank" rel="noopener" class="share-btn-weibo">
+          <i class="fab fa-weibo"></i>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+  
+  
+    
+  
+  
+  <div class="media author-card content-widget-hr">
+    
+      
+      <img class="portrait mr-3" src="/authors/admin/avatar_hu52a603635ecebd45650b162dadabb4e5_12861_250x250_fill_q100_lanczos_center.jpg" alt="Avatar">
+    
+
+    <div class="media-body">
+      <h5 class="card-title"><a href="/">Lingjia Li</a></h5>
+      <h6 class="card-subtitle">Final year undergraduate</h6>
+      <p class="card-text">My research interests include digital media, computer graphics, HCI and information systems.</p>
+      <ul class="network-icon" aria-hidden="true">
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+    <li>
+      <a href="mailto:lljessieee97@163.com" >
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <li>
+      <a href="https://github.com/lipga" target="_blank" rel="noopener">
+        <i class="fab fa-github"></i>
+      </a>
+    </li>
+  
+</ul>
+
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+  </div>
+</article>
+
+      
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js" integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js" integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
+
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/8.4.3/mermaid.min.js" integrity="" crossorigin="anonymous" title="mermaid"></script>
+      
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js" integrity="sha256-1zu+3BnLYV9LdiY85uXMzii3bdrkelyp37e0ZyTAQh0=" crossorigin="anonymous"></script>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/r.min.js"></script>
+        
+      
+
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.5.1/leaflet.js" integrity="sha256-EErZamuLefUnbMBQbsEqu1USa+btR2oIlCpBJbyD4/g=" crossorigin="anonymous"></script>
+    
+
+    
+    
+    <script>const code_highlighting = true;</script>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+      const search_config = {"indexURI":"/index.json","minLength":1,"threshold":0.3};
+      const i18n = {"no_results":"No results found","placeholder":"Search...","results":"results found"};
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    
+    
+    
+    <script src="/js/academic.min.a0d331bcd05dbe8b31e244f796710f08.js"></script>
+
+    
+
+
+
+
+
+
+  
+  
+  <div class="container">
+    <footer class="site-footer">
+  
+
+  <p class="powered-by">
+    
+
+    Powered by the
+    <a href="https://sourcethemes.com/academic/" target="_blank" rel="noopener">Academic theme</a> for
+    <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a>.
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" class="back-to-top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+  </div>
+  
+
+  
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
