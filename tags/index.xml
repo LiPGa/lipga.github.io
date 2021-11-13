@@ -13,6 +13,14 @@
     </image>
     
     <item>
+      <title>Other</title>
+      <link>/tags/other/</link>
+      <pubDate>Sun, 05 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>/tags/other/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>website</title>
       <link>/tags/website/</link>
       <pubDate>Sun, 05 Jan 2020 00:00:00 +0000</pubDate>
@@ -25,14 +33,6 @@
       <link>/tags/app/</link>
       <pubDate>Mon, 30 Dec 2019 00:00:00 +0000</pubDate>
       <guid>/tags/app/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Information system</title>
-      <link>/tags/information-system/</link>
-      <pubDate>Fri, 27 Dec 2019 00:00:00 +0000</pubDate>
-      <guid>/tags/information-system/</guid>
       <description></description>
     </item>
     
