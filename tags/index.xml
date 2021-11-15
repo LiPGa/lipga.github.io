@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags | L</title>
+    <link>/tags/</link>
+      <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <description>Tags</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 07 Dec 2021 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
+      <title>Tags</title>
+      <link>/tags/</link>
+    </image>
+    
+    <item>
+      <title>Mining software repositories</title>
+      <link>/tags/mining-software-repositories/</link>
+      <pubDate>Tue, 07 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>/tags/mining-software-repositories/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Negative Sentiment-related Events</title>
+      <link>/tags/negative-sentiment-related-events/</link>
+      <pubDate>Tue, 07 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>/tags/negative-sentiment-related-events/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sentiment analysis</title>
+      <link>/tags/sentiment-analysis/</link>
+      <pubDate>Tue, 07 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>/tags/sentiment-analysis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Collaborative and social computing</title>
+      <link>/tags/collaborative-and-social-computing/</link>
+      <pubDate>Tue, 14 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>/tags/collaborative-and-social-computing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GitHub</title>
+      <link>/tags/github/</link>
+      <pubDate>Tue, 14 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>/tags/github/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Human factors</title>
+      <link>/tags/human-factors/</link>
+      <pubDate>Tue, 14 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>/tags/human-factors/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Project management</title>
+      <link>/tags/project-management/</link>
+      <pubDate>Tue, 14 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>/tags/project-management/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Other</title>
+      <link>/tags/other/</link>
+      <pubDate>Sun, 05 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>/tags/other/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>website</title>
+      <link>/tags/website/</link>
+      <pubDate>Sun, 05 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>/tags/website/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>APP</title>
+      <link>/tags/app/</link>
+      <pubDate>Mon, 30 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>/tags/app/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Social computing</title>
+      <link>/tags/social-computing/</link>
+      <pubDate>Fri, 27 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>/tags/social-computing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Visualization</title>
+      <link>/tags/visualization/</link>
+      <pubDate>Fri, 27 Dec 2019 00:00:00 +0000</pubDate>
+      <guid>/tags/visualization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MatLab</title>
+      <link>/tags/matlab/</link>
+      <pubDate>Sat, 27 Apr 2019 00:00:00 +0000</pubDate>
+      <guid>/tags/matlab/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Deep Learning</title>
+      <link>/tags/deep-learning/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      <guid>/tags/deep-learning/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
