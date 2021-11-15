@@ -5,7 +5,7 @@
     <link>/authors/</link>
       <atom:link href="/authors/index.xml" rel="self" type="application/rss+xml" />
     <description>Authors</description>
-    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><lastBuildDate>Tue, 07 Dec 2021 00:00:00 +0000</lastBuildDate>
     <image>
       <url>/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_2.png</url>
       <title>Authors</title>
@@ -13,11 +13,43 @@
     </image>
     
     <item>
+      <title>Jian Cao*</title>
+      <link>/authors/jian-cao/</link>
+      <pubDate>Tue, 07 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>/authors/jian-cao/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lingjia Li</title>
+      <link>/authors/lingjia-li/</link>
+      <pubDate>Tue, 07 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>/authors/lingjia-li/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Qing Qi</title>
+      <link>/authors/qing-qi/</link>
+      <pubDate>Tue, 07 Dec 2021 00:00:00 +0000</pubDate>
+      <guid>/authors/qing-qi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>David Lo</title>
+      <link>/authors/david-lo/</link>
+      <pubDate>Tue, 14 Jul 2020 00:00:00 +0000</pubDate>
+      <guid>/authors/david-lo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title></title>
       <link>/authors/admin/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>/authors/admin/</guid>
-      <description>&lt;p&gt;I am currently a Master student in the Department of Computing and Information Science at Cornell University. Previously, I graduated from the Department of Computer Science and Engineering of Shanghai Jiao Tong University.&lt;/p&gt;
+      <description>&lt;p&gt;I am currently a Master student in the &lt;a href=&#34;https://cis.cornell.edu/cornell-computing-information-science&#34;&gt;College of Computing and Information Science&lt;/a&gt; at Cornell University. Previously, I graduated from the &lt;a href=&#34;https://www.cs.sjtu.edu.cn/&#34;&gt;Department of Computer Science and Engineering&lt;/a&gt; of Shanghai Jiao Tong University.&lt;/p&gt;
 &lt;p&gt;I am passionate about applying technology (Software Engineering, Data Science and HCI) to solve real-world problems and provide better experience for people.&lt;/p&gt;
 </description>
     </item>
