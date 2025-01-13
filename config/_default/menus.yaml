@@ -19,6 +19,9 @@ main:
   - name: Publications
     url: '#publications'
     weight: 50
+  - name: Travels
+    url: '#travels'
+    weight: 50
   # - name: CV
   #   url: uploads/resume.pdf
   #   weight: 70

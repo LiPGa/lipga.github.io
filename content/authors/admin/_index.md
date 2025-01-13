@@ -73,8 +73,8 @@ highlight_name: true
 
 I did my master's study at the [College of Computing and Information Science](https://cis.cornell.edu/cornell-computing-information-science) at Cornell University. Before that, I studied [Computer Science and Technology](https://www.cs.sjtu.edu.cn/en/) and minored in Animation at [Shanghai Jiao Tong University](https://en.sjtu.edu.cn/). 
 
-I am passionate about applying technologies to solve real-world problems and provide a better experience for people. In my spare hours, I like to play volleyball, go hiking, take pretty photos, watch and talk about animation movies.
+I am passionate about applying technologies to solve real-world problems and provide a better experience for people. In my spare hours, I play volleyball, hike, take pretty photos, watch animation movies.
 
 Currently working as software engineer in NYC. 
 
-{{< icon name="download" pack="fas" >}} Feel free to [connect](https://www.linkedin.com/in/lingjia-li/)/reach out via email!
+{{< icon name="download" pack="fas" >}} Feel free to [connect](https://www.linkedin.com/in/lingjia-li/) / reach out via email!

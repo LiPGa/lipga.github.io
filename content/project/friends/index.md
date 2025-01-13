@@ -172,15 +172,11 @@ From this course project, we learned and accomplished the procedure to build a c
 
 This is a preliminary work and we still have a lot to improve in the future. In our future work, we plan to enhance our system from the following aspects:
 
-- Include larger data-sets to make our system more general;
-
-- Consider forbidden triad in evaluating common friends;
-
-- Optimize the performance of detection algorithm to meet online real-time demands;
-
-- Improve the composer of our system to make the results more sensible;
-
-- Find some ground-truth cases of friendships in GitHub to evaluate the accuracy of our results.
+- Incorporate larger datasets to enhance the generality of our system.
+- Account for forbidden triads when evaluating common friends.
+- Optimize the detection algorithm to ensure it meets online real-time performance requirements.
+- Refine the system's composer to produce more meaningful and sensible results.
+- Identify ground-truth friendship cases on GitHub to assess the accuracy of our results.
 
 In the future, it is expected to see that our implementation will be integrated into GitHub, to improve recommendations of potential collaborators. 
 
